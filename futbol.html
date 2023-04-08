@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+
+<h1>Programa CALULAR PUNTOS DE UN EQUIPO DE FUTBOL</h1>
+
+<script type="text/javascript">
+	let nombre, peso, altura, imcCarlos, imcHernan;
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");		
+	}
+
+	function imprimir(mensaje){
+		document.write(mensaje);
+		saltarLinea();
+	}
+
+
+
+	let victorias = parseInt(prompt("Informe la cantidad de victorias"));
+	let empates = parseInt(prompt("Informe la cantidad de empates"));
+
+	let puntosTotal = victorias * 3 + empates;
+
+	imprimir ("EL total de victorias de puntos del equipo es: "+puntosTotal);
+
+
+	if(puntosTotal>28){
+		imprimir("El equipo está mejor que el año pasado");
+	}
+	
+	if(puntosTotal<28){
+		imprimir("El equipo está mejor que el año pasado");
+
+	}
+	if(puntosTotal==28){
+		imprimir("El equipo está mejor que el año pasado");
+	}
+
+
+</script>
+
+
+ 

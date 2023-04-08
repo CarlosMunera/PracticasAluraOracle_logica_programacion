@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<h1>Programa - NUMEROS PARES DEL 1 AL 100</h1>
+
+<script type="text/javascript">
+	let nombre, peso, altura, imcCarlos, imcHernan;
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");		
+	}
+
+	function imprimir(mensaje){
+		document.write(mensaje);
+		saltarLinea();
+	}
+
+
+	let contador = 1; 
+
+
+	while (contador <= 100){
+		if (contador%2 == 0){
+			imprimir(contador);
+		}
+		contador++;
+	}
+	
+</script>
+
+

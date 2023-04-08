@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+<h1>Programa JUEGO DE ADIVINACION</h1>
+<p>Adivina un numero entre 0 y 10</p>
+
+<script type="text/javascript">
+	let nombre, peso, altura, imcCarlos, imcHernan;
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");		
+	}
+
+	function imprimir(mensaje){
+		document.write(mensaje);
+		saltarLinea();
+	}
+
+	let numeroPensado = Math.round(Math.random()*10);
+	let intentos = 3;
+	let contador = 1;
+
+
+	
+
+	while (contador <= intentos){
+		var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+		if(numeroPensado == numeroLanzado){
+			alert("Usted acertó, en el intento "+contador+ " el número era: "+ numeroPensado);
+				break;
+		} else {
+			alert("Usted erró, intento #"+contador+" de 3" );
+		}
+		contador++;
+	}
+
+
+	if (numeroPensado == numeroLanzado){
+		imprimir("Usted acertó, en el intento "+contador+ " el número era: "+ numeroPensado);
+	} else {
+		imprimir("usted erró, el número pensado era: "+numeroPensado);
+	}
+
+	imprimir("FIN");
+	
+</script>
+
+
