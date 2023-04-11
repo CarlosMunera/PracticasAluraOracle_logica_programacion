@@ -1,0 +1,56 @@
+<h1>Programa Detectar coordenadas</h1>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+var pantalla = document.querySelector("canvas");
+var pincel = pantalla.getContext("2d");
+var colores = ["blue","red","green"];
+var indiceColor = 0;
+
+
+pincel.fillStyle = "lightgrey";
+pincel.fillRect(0, 0, 600, 400);
+
+
+function cambiarColor(evento){
+	indiceColor++;
+	if (indiceColor >= colores.length){
+		indiceColor = 0;
+	}
+	console.log(colores[indiceColor]);
+	return false;
+}
+
+
+function exibirAlerta(evento){
+	var x = evento.pageX - pantalla.offsetLeft;
+	var y = evento.pageY - pantalla.offsetTop; 
+	console.log("X:"+x+", Y:"+y);
+
+	dibujarCirculo(x,y);
+	//alert("Usted hizo un clic en: ");
+}
+
+
+function dibujarCirculo(x,y){
+	pincel.fillStyle = colores[indiceColor];
+	pincel.beginPath();
+	pincel.arc(x,y,10,0,2*3.14)
+	pincel.fill();
+}
+
+
+
+
+//pantalla.addEventListener("click",exibirAlerta)
+
+pantalla.onclick = exibirAlerta;
+pantalla.oncontextmenu = cambiarColor;
+
+
+
+
+
+</script>
